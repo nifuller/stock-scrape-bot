@@ -7,6 +7,10 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
+#import config
+
+#SCRAPEOPS_API_KEY = config.api_key
+
 BOT_NAME = 'stock_scrapy'
 
 SPIDER_MODULES = ['stock_scrapy.spiders']
@@ -53,17 +57,20 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
+DOWNLOADER_MIDDLEWARES = {
+    'scrapeops_scrapy.middleware.retry.RetryMiddleware': 550, 
+    'scrapy.downloadermiddlewares.retry.RetryMiddleware': None,
     #'stock_scrapy.middlewares.StockScrapyDownloaderMiddleware': 543,
     #'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware':None,
     #'scrapy_user_agents.middlewares.RandomUserAgentMiddleware': 400,
-#}
+}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
-#EXTENSIONS = {
-#    'scrapy.extensions.telnet.TelnetConsole': None,
-#}
+EXTENSIONS = {
+    'scrapeops_scrapy.extension.ScrapeOpsMonitor': 500,
+    #'scrapy.extensions.telnet.TelnetConsole': None,
+}
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html

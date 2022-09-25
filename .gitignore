@@ -137,3 +137,4 @@ dmypy.json
 *.csv
 *.xml
 *.json
+config.py
