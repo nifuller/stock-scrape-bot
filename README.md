@@ -1,5 +1,5 @@
 # Scrapy Stock Bot
-[![](https://img.shields.io/badge/license-MIT-orange)]
+![](https://img.shields.io/badge/license-MIT-orange)
 
 
 ## Description
