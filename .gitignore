@@ -139,5 +139,4 @@ dmypy.json
 *.json
 config.py
 
-
-stock-scrape-bot/dbs
+dbs/
