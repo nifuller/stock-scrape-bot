@@ -1,5 +1,10 @@
 # Scrapy Stock Bot
-A scrapy bot that scrapes stock data.
+A Scrapy bot that gathers data from the most active stocks on Yahoo Finance. In order to continously collect most active stocks data, the Scrapy bot is deployed on DigitalOcean. From there, a scheduler is setup using Scrapyd and ScrapyOP so that the bot can scrap the stock data after the US stock market closes at 16:00 est, Monday through Friday. Once the bot finishes gathering the stock data, it feeds it into a pipeline to create a XML file. Then, the bot then sends over the newly created XML file to a data lake which is hosted on AWS. When the data is properly stored on AWS, it is placed into an Iceberg SQL data where it can be queried through Spark for analysis.
+
+# List of Technologies used
+- DigitalOcean
+- AWS 
+- Iceberg & Spark
 
 # To-Do-List
 1. ~~Accquire data~~
