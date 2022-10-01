@@ -138,3 +138,6 @@ dmypy.json
 *.xml
 *.json
 config.py
+
+
+stock-scrape-bot/dbs
