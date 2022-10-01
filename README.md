@@ -15,13 +15,17 @@ A Scrapy bot that gathers data from the most active stocks on Yahoo Finance. In 
 While working on this project, I have came across several challenging issues, most of which were just trying to install some of the technologies on my local machine (Scrapy & Docker). Other than those issues, the only real issue I had was writing an XML pipeline. Writing the XML pipeline code, was rough due to the poor documentation on Scrapy pipelines and the lack of XML examples within the documentation. 
 
 ## Future Features
+- Deploy multiple spiders to gather different stock data at once 
+- Have rotating IP addresses so my spiders can avoid being banned
+- Set up an autothrottle for the spider so it doesnt access the site too fast
 
-## To-Do-List
+### To-Do-List
 1. ~~Accquire data~~
 2. ~~Cleanse the data~~
 3. ~~Convert the data to correct format~~ 
-4. Hookup spider to a scheduler to scrape data over a certain time period (scrapyard)
-5. Interpreting data that could be interpreted in multiple ways (Need to look more into this)
+5. Hookup spider to a scheduler to scrape data over a certain time period (scrapyard)
 6. Remove duplicates of the data
 7. Store data on a cloud service (most likely AWS)
 8. Create a SQL database to query data (Iceberg & Spark)
+
+
