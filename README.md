@@ -1,5 +1,5 @@
 # Scrapy Stock Bot
-![](https://img.shields.io/badge/contributors-1-green) ![](https://img.shields.io/badge/license-MIT-orange) ![](https://img.shields.io/badge/issues-0%20open-green)
+![](https://img.shields.io/badge/contributors-1-green) ![](https://img.shields.io/badge/forks-0-blue) ![](https://img.shields.io/badge/stars-0-blue) ![](https://img.shields.io/badge/license-MIT-orange) ![](https://img.shields.io/badge/issues-0%20open-green)
 
 
 ## Description
