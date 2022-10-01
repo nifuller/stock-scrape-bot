@@ -1,4 +1,6 @@
 # Scrapy Stock Bot
+https://img.shields.io/badge/<LABEL>-<MESSAGE>-<COLOR>
+
 
 ## Description
 A Scrapy bot that gathers data from the most active stocks on Yahoo Finance. In order to continously collect most active stocks data, the Scrapy bot is deployed on DigitalOcean. With the bot deployed on DigitalOcean, it was easy to integrate Scrapyd and ScrapyOP within the bot to create a scheduler. The bot continuously gathers stock data, Monday through Friday at 1600 est. After the bot collects the data, it feeds it into a pipeline where the data is cleansed (removes unwanted data or duplicates) and converts it into the data format that is needed. (In this case I needed XML format, so the pipeline creates a XML file). Then, the bot then sends over the cleansed and new data format, it is sent to a data lake which is hosted on AWS. Now that the data is properly and securly stored on AWS, the data can be pulled from the data lake and placed into an Iceberg SQL data table which is hosted locally through Docker. Through docker we can use Spark to query the SQL data for analysis.
