@@ -139,4 +139,7 @@ dmypy.json
 *.json
 config.py
 
-dbs/
+dist/
+dbs/stock_scrapy.db
+stock_scrapy/dbs/default.db
+stock_scrapy/dbs/stock_scrapy.db
