@@ -20,7 +20,16 @@ While working on this project, I have came across several challenging issues, mo
 - Set up an autothrottle for the spider so it doesnt access the site too fast
 
 ## Installation
+1. clone the project
+2. create a virtual environment
+3. start virtual environment
+4. pip install the following packages:
+    - scrapy
+    - scrapyd
+    - scrapyOP
 
+5. install docker
 
 
 ## Using the Project
+TBA
