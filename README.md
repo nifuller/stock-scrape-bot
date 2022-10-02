@@ -7,7 +7,7 @@ A Scrapy bot that gathers data from the most active stocks on Yahoo Finance. In 
 
 ### Technologies & Packages Used
 - Scrapy
-- Scrapyd & ScrapyOP
+- Scrapyd & Scrapyop
 - Digital Ocean
 - AWS
 - Iceberg & Spark
@@ -26,21 +26,24 @@ The following will get just the spider up and running on your local machine:
 1. clone the project
 2. create a virtual environment
 3. start virtual environment
-4. pip install the following packages:
+4. pip3 install the following packages:
     - scrapy
     - scrapyd
     - scrapyops-scrapy
 
+**Note:** this will not connect to any of the servers and the crawler will only work locally. 
 
 ## Using the Project
-First activate the virtual enviornment,
+First, activate the virtual enviornment:
 
-source [name of virtenv]/scripts/activate
+`source [name of virtenv]/scripts/activate`
 
-Then cd into the spider directory 
+Then, cd into the spider directory: 
 
-cd stock_scrapy
+`cd stock_scrapy`
 
-Finally, run the following script to activate the scrapy bot
+Finally, run the following script to activate the scrapy bot:
 
-scrapy crawl mostactive
+`scrapy crawl mostactive`
+
+Once the crawler finishes, an XML file should be outputed. 
