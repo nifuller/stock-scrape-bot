@@ -22,21 +22,37 @@ While working on this project, I have came across several challenging issues, mo
 - Set up an autothrottle for the spider so it doesnt access the site too fast
 
 ## Installation
-The following will get just the spider up and running on your local machine:
 1. clone the project
 2. create a virtual environment
+
+`python3 -m venv scrapy-virtenv`
+
 3. start virtual environment
-4. pip3 install the following packages:
+
+`source scrapy-virtenv/scripts/activate`
+
+or
+
+`source scrapy-virtenv/bin/activate`
+
+4. `pip3 install` the following packages:
     - scrapy
+    **Note:** If you're getting an import scrapy error in _most-active.py_ file make sure you 
+    select the correct Python interpreter; Ctrl + Shift + P, Python: select Interpreter (then whatever is
+    the correct one for you)
     - scrapyd
     - scrapyops-scrapy
 
-**Note:** this will not connect to any of the servers and the crawler will only work locally. 
+**Note:** This will only get the crawler working. 
 
-## Using the Project
+## Running the Web Crawler
 First, activate the virtual enviornment:
 
-`source [name of virtenv]/scripts/activate`
+`source scrapy-virtenv/scripts/activate`
+
+or
+
+`source scrapy-virtenv/bin/activate`
 
 Then, cd into the spider directory: 
 
@@ -46,4 +62,4 @@ Finally, run the following script to activate the scrapy bot:
 
 `scrapy crawl mostactive`
 
-Once the crawler finishes, an XML file should be outputed. 
+Once the crawler finishes, an XML file called _mostactive.xml_ will be outputed. 
