@@ -34,10 +34,13 @@ The following will get just the spider up and running on your local machine:
 
 ## Using the Project
 First activate the virtual enviornment,
+
 source [name of virtenv]/scripts/activate
 
 Then cd into the spider directory 
+
 cd stock_scrapy
 
 Finally, run the following script to activate the scrapy bot
+
 scrapy crawl mostactive
