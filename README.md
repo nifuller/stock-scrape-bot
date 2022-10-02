@@ -22,16 +22,22 @@ While working on this project, I have came across several challenging issues, mo
 - Set up an autothrottle for the spider so it doesnt access the site too fast
 
 ## Installation
+The following will get just the spider up and running on your local machine:
 1. clone the project
 2. create a virtual environment
 3. start virtual environment
 4. pip install the following packages:
     - scrapy
     - scrapyd
-    - scrapyOP
-
-5. install docker
+    - scrapyops-scrapy
 
 
 ## Using the Project
-TBA
+First activate the virtual enviornment,
+source [name of virtenv]/scripts/activate
+
+Then cd into the spider directory 
+cd stock_scrapy
+
+Finally, run the following script to activate the scrapy bot
+scrapy crawl mostactive
