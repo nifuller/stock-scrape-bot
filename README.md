@@ -7,7 +7,7 @@ A Scrapy bot that gathers data from the most active stocks on Yahoo Finance. In 
 
 ### Technologies & Packages Used
 - Scrapy
-- Scrapyd & ScrapyOP
+- Scrapyd & Scrapyop
 - Digital Ocean
 - AWS
 - Iceberg & Spark
@@ -22,16 +22,48 @@ While working on this project, I have came across several challenging issues, mo
 - Set up an autothrottle for the spider so it doesnt access the site too fast
 
 ## Installation
+The following steps will help get **ONLY** the webcrawler working on your local machine. It will not be hooked up to any of the servers. 
+
 1. clone the project
 2. create a virtual environment
+
+`python3 -m venv scrapy-virtenv`
+
 3. start virtual environment
-4. pip install the following packages:
-    - scrapy
-    - scrapyd
-    - scrapyOP
 
-5. install docker
+`source scrapy-virtenv/scripts/activate`
 
+or
 
-## Using the Project
-TBA
+`source scrapy-virtenv/bin/activate`
+
+4. install the following packages through pip3:
+    - `pip3 install scrapy`
+    
+    **Note:** If you're getting an import scrapy error in _most-active.py_ file make sure you 
+    select the correct Python interpreter; Ctrl + Shift + P, Python: select Interpreter (then whatever is
+    the correct one for you)
+    
+    - `pip3 install scrapyd`
+    - `pip3 install scrapyops-scrapy`
+
+**Note:** The last two packages aren't needed to get the web crawler to work. They are only needed to get the crawler ready for deployment onto a server. If you're not interested in deploying the crawler, don't install the last two packages.
+
+## Running the Web Crawler
+First, activate the virtual enviornment:
+
+`source scrapy-virtenv/scripts/activate`
+
+or
+
+`source scrapy-virtenv/bin/activate`
+
+Then, cd into the spider directory: 
+
+`cd stock_scrapy`
+
+Finally, run the following script to activate the scrapy bot:
+
+`scrapy crawl mostactive`
+
+Once the crawler finishes, an XML file called _mostactive.xml_ will be outputed. 
