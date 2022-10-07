@@ -7,7 +7,8 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-import stock_scrapy.config as config
+from distutils.command.config import config
+#from stock_scrapy import config
 
 #SCRAPEOPS_API_KEY = config.token
 

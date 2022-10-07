@@ -144,3 +144,4 @@ dist/
 dbs/stock_scrapy.db
 stock_scrapy/dbs/default.db
 stock_scrapy/dbs/stock_scrapy.db
+stock_scrapy/stock_scrapy/config.cfg
